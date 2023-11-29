@@ -18,18 +18,18 @@
 	
 <body>
 	<h3 style = "text-align:center;">댓글 작성</h3>
-	<form id = "form>"
+	<form id = "form">
 		<label>내용: &nbsp<input id="msg" placeholder = "여기에 입력하세요"/></label>
 		<button type="submit" id="btn">입력</button>
 	</form>
 	
-	<div id="result"></div>
+	<p id="result"></p>
 </body>
 <script>
 	
 var form = document.getElementById('form');
 var msg = document.getElementById('msg').value;
-var txt = document.getElementById('txt');
+var result = document.getElementById('result');
 	
 form.addEventListener('submit', function(e) {
 
