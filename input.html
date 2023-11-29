@@ -17,11 +17,14 @@
 </head>
 	
 <body>
+	<?php
+	    $v_test = $POST["words"];
+	    print_r($v_test);
+	?>
 	<h3 style = "text-align:center;">댓글 작성</h3>
-	<form method = "get" target = "param">
-		<label>내용: &nbsp;<input type = "text" placeholder="여기에 입력하세요"></label>
+	<form method = "post" action = "<?php echo $_SERVER['PHP_SELF'];?>">
+		<label>내용: &nbsp;<input type = "text" name = "words" placeholder="여기에 입력하세요" value = "<?php echo $v_test;?>"></label>
 		<input type = "submit" value = "입력">
 	</form>
-	
 </body>
 </html>
