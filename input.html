@@ -18,14 +18,14 @@
 	
 <body>
 	<h3 style = "text-align:center;">댓글 작성</h3>
-	<label>내용: &nbsp<input id="contents" type= "text" placeholder = "여기에 입력하세요"/></label>
-	<input type="button" value = "작성" onclick="myFunction()"/>
-	<div id="result"></div>
+	<label>내용: &nbsp<input id='contents' placeholder = "여기에 입력하세요"/></label>
+	<input type="button" value = "작성" onclick='myFunction()'/>
+	<div id='result'></div>
 </body>
 <script>
 function myFunction(){
-		const contents = document.getElementById("contents").value;
-		document.getElementById("result").innertText = contents;
+  const contents = document.getElementById('contents').value;
+  document.getElementById("result").innertText = contents;
 }
 </script>
 </html>
