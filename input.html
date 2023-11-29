@@ -18,17 +18,14 @@
 	
 <body>
 	<h3 style = "text-align:center;">댓글 작성</h3>
-	<input id='name' onchange='printName()'/>
+	<label>내용: &nbsp<input id="contents" type= "text></label>
+	<input id = "submit" type="submit">
 	<div id='result'></div>
 </body>
 <script>
-	function printName()  {
-		const name = document.getElementById('name').value;
-		document.getElementById("result").innerText = name;
-	}
-	
+        $("#submit").click(function () {
+		print($("#contents").val());
+	});
 </script>
 </html>
-
-
 
