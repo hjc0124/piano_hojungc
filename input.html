@@ -19,13 +19,15 @@
 <body>
 	<h3 style = "text-align:center;">댓글 작성</h3>
 	<label>내용: &nbsp<input id="contents" type= "text></label>
-	<input id = "submit" type="submit">
+	<button onclick = "textis()">작성</button>
 	<div id='result'></div>
 </body>
 <script>
-        $("#submit").click(function () {
-		print($("#contents").val());
-	});
+function textis(){
+	const contents = 
+		document.getElementById("contents").value;
+		document.getElementById("result").innerText = contents;
+}
 </script>
 </html>
 
