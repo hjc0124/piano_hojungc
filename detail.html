@@ -7,6 +7,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
       /* 폰트 적용을 위한 코드(고운고딕) */
@@ -14,7 +17,7 @@
 	font-family: 'Gowun Dodum', sans-serif;
         font-weight: 400;
       }
-	button{
+	/*button01{
 		border: none;
 		display: block;
 		margin: auto;
@@ -23,7 +26,7 @@
 		width: 130px;
 		background-color: #08088A;
 		color: #fff
-	}
+	}*/
 	img{
 		display: block;
 		margin: auto;
@@ -50,8 +53,19 @@
 	3. 의상은 "크리스마스"가 컨셉입니다<br/>
   </p>
 
-  <button alt="다음" onclick="location.href='anvil.html'">Next</button>
-  <button alt="입력" onclick="location.href='input.html'">input</button>
+  <button alt="다음" class = "btn btn-primary" onclick="location.href='anvil.html'">Next</button>
+
+  <h3 style = "text-align:center;">댓글 작성</h3>
+  <p id="result"></p>
+  <form id = "form">
+	  <label>아이디: <input type = "text" placeholder = "아이디를 입력하세요"/></label>
+	  <label>내용: <input type = "text" placeholder = "내용을 입력하세요"/></label>
+  </form>
+  <button class="btn btn-default" onclick="myFunction()">제출</button>
+  <button class="btn btn-default" type="reset">초기화</button>
+	
+  <button alt="입력" onclick="location.href='input.html'">input</button><br/><br/>
+	
   <img src = "img/slide2.PNG">
 
       <div class="card-footer">
