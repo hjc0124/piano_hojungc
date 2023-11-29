@@ -55,8 +55,10 @@
 
   <button alt="다음" class = "btn btn-primary" onclick="location.href='anvil.html'">Next</button>
 
-  <h3 style = "text-align:center;">댓글 작성</h3>
+  <h3>댓글 작성</h3>
+	
   <p id="result"></p>
+	
   <form id = "form">
 	  <label>아이디: <input type = "text" placeholder = "아이디를 입력하세요"/></label>
 	  <label>내용: <input type = "text" placeholder = "내용을 입력하세요"/></label>
@@ -68,37 +70,8 @@
 	
   <img src = "img/slide2.PNG">
 
-      <div class="card-footer">
-      <form onsubmit="addComment(event)">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="댓글을 입력하세요" required>
-        </div>
-        <button type="submit" class="btn btn-primary">작성</button>
-      </form>
-      <div class="comments mt-3">
-      </div>
-    </div>
-
 <script>
-	function addComment(event) {
-  		event.preventDefault();
-  		var commentInput = event.target.querySelector("input");
-		var commentText = commentInput.value;
-		var date = new Date().toLocaleString();
-		
-		var commentDiv = document.createElement("div");
-		commentDiv.className = "card my-3";
-		commentDiv.innerHTML = `
-    			<div class="card-body">
-     				 <p class="card-text">${commentText}</p>
-     				 <p class="card-text"><small class="text-muted">${date}</small></p>
-			</div>;
-		var commentsDiv = event.target.parentNode.querySelector(".comments");
-  		commentsDiv.insertBefore(commentDiv, commentsDiv.firstChild);
-
-  		commentInput.value = "";
-}
-
+	
  function myFunction(){
 	 var x = document.getElementById("form");
 	 var text = "";
