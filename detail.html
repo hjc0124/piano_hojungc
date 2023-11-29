@@ -78,12 +78,13 @@
     			<div class="card-body">
      				 <p class="card-text">${commentText}</p>
      				 <p class="card-text"><small class="text-muted">${date}</small></p>
-			</div>
-   ;
+			</div>;
 		var commentsDiv = event.target.parentNode.querySelector(".comments");
   		commentsDiv.insertBefore(commentDiv, commentsDiv.firstChild);
 
   		commentInput.value = "";
+
+	parent.ifun("성공");
 }
 </script>
 </body>
