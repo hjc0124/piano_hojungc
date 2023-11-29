@@ -19,14 +19,13 @@
 <body>
 	<h3 style = "text-align:center;">댓글 작성</h3>
 	<label>내용: &nbsp<input id="contents" type= "text></label>
-	<button onclick = "textis()">작성</button>
-	<div id='result'></div>
+	<button onclick="myFunction()">Click me</button>
+	<div id="result"></div>
 </body>
 <script>
-function textis(){
-	const contents = 
-		document.getElementById("contents").value;
-		document.getElementById("result").innerText = contents;
+function myFunction(){
+		const contents = document.getElementById("contents").value;
+		document.getElementById("result").innerHTML = contents;
 }
 </script>
 </html>
