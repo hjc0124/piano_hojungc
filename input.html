@@ -15,10 +15,21 @@
 </style>
 	<title>Piano</title>
 </head>
+	
 <body>
-  
-  <h3 style = "text-align:center;">댓글 작성</h3>
-  <label>내용: &nbsp;<input type = "text" value="여기에 입력하세요"></label>
-  
+	<h3 style = "text-align:center;">댓글 작성</h3>
+	<form action = "detail.html" method = "get" target = "param">
+		<label>내용: &nbsp;<input type = "text" placeholder="여기에 입력하세요"></label>
+		<input type = "submit" value = "입력">
+	</form>
+
+	<iframe id = "if" name = "param"></iframe>
+	
+<script>
+	function ifun(msg){
+		alert(msg);
+	}
+</script>
+	
 </body>
 </html>
