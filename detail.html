@@ -74,7 +74,7 @@
 	 for(i = 0; i<x.length; i++){
 		text += x.elements[i].value + "<br>";
 	 }
-	 var newtime = document.getElementById("result").innerHTML = today.getFullYear() + "." + eval(today.getMonth() + 1) + "." + today.getDate() + "  " + today.getHours() + ":" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+	 var newtime = document.getElementById("result").innerHTML = today.getFullYear() + "." + eval(today.getMonth() + 1) + "." + today.getDate() + "  " + today.getHours() + ":" + ":" + today.getMinutes() + ":" + String(today.getSeconds().padStart(2,"0")
 	 document.getElementById("result").innerHTML = text + "<br>" + newtime;
  }
 </script>
