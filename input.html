@@ -17,16 +17,17 @@
 </head>
 	
 <body>
-	<?php
-	    $v_test = $POST["words"];
-	    print_r($v_test);
-	?>
 	<h3 style = "text-align:center;">댓글 작성</h3>
-	<form method = "post" action = "<?php echo $_SERVER['PHP_SELF'];?>">
-		<label>내용: &nbsp;<input type = "text" name = "words" placeholder="여기에 입력하세요" value = "<?php echo $v_test;?>"></label>
-		<input type = "submit" value = "입력">
-	</form>
+	<input id='name' onchange='printName()'/>
+	<div id='result'></div>
 </body>
+<script>
+	function printName()  {
+		const name = document.getElementById('name').value;
+		document.getElementById("result").innerText = name;
+	}
+	
+</script>
 </html>
 
 
