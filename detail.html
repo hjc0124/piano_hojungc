@@ -7,9 +7,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
       /* 폰트 적용을 위한 코드(고운고딕) */
@@ -17,16 +14,15 @@
 	font-family: 'Gowun Dodum', sans-serif;
         font-weight: 400;
       }
-	/*button01{
+      button{
 		border: none;
 		display: block;
-		margin: auto;
+		margin-left: auto;
+	        margin-right: auto;
 		font-size: 40px
 		height: 80px;
 		width: 130px;
-		background-color: #08088A;
-		color: #fff
-	}*/
+	}
 	img{
 		display: block;
 		margin: auto;
@@ -34,8 +30,15 @@
 	}
 	p{
 		display: block;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 		background-color: #d2d2d2;
+	}
+	h3{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: powderblue;
 	}
 </style>
 	<title>Piano</title>
@@ -43,7 +46,6 @@
 <body>
 	<h2 style = "text-align:center;">연주회 진행 관련 세부사항</h2>
 	<hr>
-	<div style = "text-align:center; background-color: powderblue;" >
 	<h3><b>
 		진행은 3번곡 까지 연주 후 선물 교환식, 추가 연주 및 4번 곡 연주 순서로 진행합니다.<br/>
 		1. 연주곡은 아래와 같습니다. 추가 신청곡은 댓글로 1인당 1곡씩 신청해주세요<br/>
@@ -51,7 +53,6 @@
 		2. 중간에 선물교환식이 있을 예정이니 1만원 이하의 선물을 준비해오세요★<br/>
 		3. 의상은 "크리스마스"가 컨셉입니다!
 	</b></h3>
-	</div>
 
 	
 	<img src = "img/slide2.PNG">
@@ -75,7 +76,7 @@
 	 for(i = 0; i<x.length; i++){
 		text += x.elements[i].value + "<br>";
 	 }
-	 var newtime = document.getElementById("result").innerHTML = today.getFullYear() + "." + eval(today.getMonth() + 1) + "." + today.getDate() + "  " + today.getHours() + ":" + ":" + today.getMinutes() + ":" + String(today.getSeconds()).padStart(2,"0");
+	 var newtime = document.getElementById("result").innerHTML = today.getFullYear() + "." + eval(today.getMonth() + 1) + "." + today.getDate() + "  " + today.getHours() + ":" + today.getMinutes() + ":" + String(today.getSeconds()).padStart(2,"0");
 	 document.getElementById("result").innerHTML = text + "<br>" + newtime;
  }
 </script>
