@@ -18,15 +18,26 @@
 	
 <body>
 	<h3 style = "text-align:center;">댓글 작성</h3>
-	<label>내용: &nbsp<input id='contents' placeholder = "여기에 입력하세요"/></label>
-	<input type="button" value = "작성" onclick='myFunction()'/>
-	<div id='result'></div>
+	<form id = "form>"
+		<label>내용: &nbsp<input id="msg" placeholder = "여기에 입력하세요"/></label>
+		<button type="submit" id="btn">입력</button>
+	</form>
+	
+	<div id="result"></div>
 </body>
 <script>
-function myFunction(){
-  const contents = document.getElementById('contents').value;
-  document.getElementById("result").innertText = contents;
-}
+	
+var form = document.getElementById('form');
+var msg = document.getElementById('msg').value;
+var txt = document.getElementById('txt');
+	
+form.addEventListener('submit', function(e) {
+
+	e.preventDefault();
+	console.log('제출');
+
+})
+	
 </script>
 </html>
 
