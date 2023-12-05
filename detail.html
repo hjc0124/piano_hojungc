@@ -67,17 +67,13 @@
 		<input type="text" name="username" placeholder="username" />
 		<input type="text" name="comment" placeholder="comment" />
 		<button>댓글 달기</button>
+		<button type="reset">댓글 삭제</button>
 	</form>
 	<h3>댓글: </h3>
 	<ul id = "comments">
 		<li>I AM LI!!!</li>
 	<ul/>
-	<form id = "form">
-	  <label>아이디: <input type = "text" placeholder = "아이디를 입력하세요"/></label><br/>
-	  <label>내용: <input type = "text" placeholder = "내용을 입력하세요"/></label>
-	</form>
 	<button onclick="myFunction()">제출</button>
-	<button type="reset">초기화</button>
 <script>
 	const instaForm = document.querySelector("#instaForm");
 	const commentsContainer = document.querySelector("#comments");
@@ -99,7 +95,7 @@
 		commentsContainer.append(newComment);
 	};
 	// 댓글 삭제
-	commentsContainer.addEventListener("click", (e) => {
+	commentsContainer.addEventListener("reset", (e) => {
 		e.target.nodeName === "LI" && e.target.remove();
 	});
 	
