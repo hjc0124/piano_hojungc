@@ -57,7 +57,6 @@
 	
 	<img src = "img/slide2.PNG">
 	
-	<h3 style = "text-align:center;">댓글 작성</h3>
 	<p id="result"></p>
 	<hr>
 	<button alt="다음" onclick="location.href='anvil.html'">Next</button><br/>
@@ -95,7 +94,7 @@
 		commentsContainer.append(newComment);
 	};
 	// 댓글 삭제
-	commentsContainer.addEventListener("reset", (e) => {
+	commentsContainer.addEventListener("dbclick", (e) => {
 		e.target.nodeName === "LI" && e.target.remove();
 	});
 	
