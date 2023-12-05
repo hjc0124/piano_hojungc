@@ -60,7 +60,9 @@
 	<p id="result"></p>
 	<hr>
 	<button alt="다음" onclick="location.href='anvil.html'">Next</button><br/>
-	
+
+	<div id="disqus_thread"></div>
+
 	<h2>Form Events</h2>
 	<form action="/dogs" id="instaForm">
 		<input type="text" name="username" placeholder="username" />
@@ -74,41 +76,23 @@
 	<ul/>
 	<button onclick="myFunction()">제출</button>
 <script>
-	const instaForm = document.querySelector("#instaForm");
-	const commentsContainer = document.querySelector("#comments");
-	
-	// 댓글 작성
-	instaForm.addEventListener("submit", function (e) {
-		e.preventDefault();
-		const usernameInput = instaForm.elements.username;
-		const commentInput = instaForm.elements.comment;
-		addComment(usernameInput.value, commentInput.value);
-		usernameInput.value = "";
-		commentInput.value = "";
-	});
-	const addComment = (username, comment) => {
-		const newComment = document.createElement("li");
-		const bTag = document.createElement("b");
-		bTag.append(username);newComment.append(bTag);
-		newComment.append(`- ${comment}`);
-		commentsContainer.append(newComment);
-	};
-	// 댓글 삭제
-	commentsContainer.addEventListener("dbclick", (e) => {
-		e.target.nodeName === "LI" && e.target.remove();
-	});
-	
- function myFunction(){
-	 var x = document.getElementById("form");
-	 var today = new Date();
-	 var text = "";
-	 var i;
-	 for(i = 0; i<x.length; i++){
-		text += x.elements[i].value + "<br>";
-	 }
-	 var newtime = document.getElementById("result").innerHTML = today.getFullYear() + "." + eval(today.getMonth() + 1) + "." + today.getDate() + "  " + today.getHours() + ":" + today.getMinutes() + ":" + String(today.getSeconds()).padStart(2,"0");
-	 document.getElementById("result").innerHTML = text + "<br>" + newtime;
- }
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-hjc0124-github-io-piano-hojungc-detail-html.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
